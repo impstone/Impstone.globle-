@@ -1,80 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMPSTONES - Premium Gemstone Auctions</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
-        header { background-color: #333; color: white; text-align: center; padding: 20px; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        .auction-item { border: 1px solid #ddd; margin: 10px; padding: 10px; background: white; display: inline-block; width: 300px; vertical-align: top; }
-        .auction-item img { width: 100%; height: 200px; object-fit: cover; }
-        .bid-button { background-color: #4CAF50; color: white; padding: 10px; border: none; cursor: pointer; }
-        footer { background-color: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; }
-    </style>
+<meta charset="UTF-8">
+<title>IMPSTONE GLOBAL | Gemstone Marketplace</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f2f2f2;
+}
+header{
+  background:#111;
+  color:#fff;
+  padding:15px 25px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header h1{
+  margin:0;
+  font-size:22px;
+}
+.cart{
+  font-size:18px;
+}
+section{
+  padding:25px;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.card{
+  background:#fff;
+  border-radius:6px;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+  overflow:hidden;
+}
+.card img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+}
+.card div{
+  padding:12px;
+}
+button{
+  width:100%;
+  padding:8px;
+  margin-top:6px;
+  border:none;
+  cursor:pointer;
+  border-radius:4px;
+}
+.add{
+  background:#444;
+  color:#fff;
+}
+.buy{
+  background:#d4af37;
+  font-weight:bold;
+}
+.modal{
+  display:none;
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:rgba(0,0,0,.7);
+}
+.modal-content{
+  background:#fff;
+  width:90%;
+  max-width:400px;
+  margin:50px auto;
+  padding:20px;
+  border-radius:6px;
+}
+.modal-content input{
+  width:100%;
+  padding:8px;
+  margin:6px 0;
+}
+.crypto a{
+  display:block;
+  text-align:center;
+  margin-top:8px;
+  padding:10px;
+  background:#111;
+  color:#fff;
+  text-decoration:none;
+  border-radius:4px;
+}
+footer{
+  background:#111;
+  color:#aaa;
+  text-align:center;
+  padding:15px;
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>IMPSTONES</h1>
-        <p>Your Premier Destination for Rare Gemstone Auctions</p>
-        <nav>
-            <a href="#auctions" style="color: white; margin: 0 10px;">Auctions</a>
-            <a href="#about" style="color: white; margin: 0 10px;">About Us</a>
-            <a href="#contact" style="color: white; margin: 0 10px;">Contact</a>
-        </nav>
-    </header>
 
-    <div class="container">
-        <section id="auctions">
-            <h2>Current Auctions</h2>
-            <div class="auction-item">
-                <img src="https://via.placeholder.com/300x200?text=Ruby+Gem" alt="Ruby Gemstone">
-                <h3>Rare Ruby Gem</h3>
-                <p>Description: A stunning 5-carat ruby from Myanmar. Perfect for collectors.</p>
-                <p>Current Bid: $500</p>
-                <button class="bid-button">Place Bid</button>
-            </div>
-            <div class="auction-item">
-                <img src="https://via.placeholder.com/300x200?text=Sapphire+Gem" alt="Sapphire Gemstone">
-                <h3>Blue Sapphire</h3>
-                <p>Description: High-quality 3-carat sapphire with excellent clarity.</p>
-                <p>Current Bid: $300</p>
-                <button class="bid-button">Place Bid</button>
-            </div>
-            <div class="auction-item">
-                <img src="https://via.placeholder.com/300x200?text=Emerald+Gem" alt="Emerald Gemstone">
-                <h3>Colombian Emerald</h3>
-                <p>Description: Vibrant 4-carat emerald, ethically sourced.</p>
-                <p>Current Bid: $400</p>
-                <button class="bid-button">Place Bid</button>
-            </div>
-            <!-- Add more items as needed -->
-        </section>
+<header>
+  <h1>IMPSTONE GLOBAL</h1>
+  <div class="cart">🛒 Cart: <span id="cartCount">0</span></div>
+</header>
 
-        <section id="about">
-            <h2>About IMPSTONES</h2>
-            <p>At IMPSTONES, we specialize in authentic gemstone auctions. Discover rare finds from around the world and bid with confidence.</p>
-        </section>
+<section>
+<h2>Our Gemstones</h2>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: info@impstones.com | Phone: (123) 456-7890</p>
-        </section>
+<div class="grid">
+
+<script>
+let cart=0;
+function addCart(){
+  cart++;
+  document.getElementById("cartCount").innerText=cart;
+}
+function buyNow(product){
+  document.getElementById("productName").value=product;
+  document.getElementById("buyModal").style.display="block";
+}
+</script>
+
+<!-- PRODUCTS -->
+<script>
+const products=[
+"Blue Sapphire","Yellow Sapphire","Ruby","Emerald","Opal",
+"Pearl","Garnet","Amethyst","Topaz","Tourmaline"
+];
+products.forEach(p=>{
+document.write(`
+<div class="card">
+<img src="https://images.unsplash.com/photo-1615484477778-ca3b77940c25">
+<div>
+<h3>${p}</h3>
+<p>Natural Gemstone</p>
+<button class="add" onclick="addCart()">Add to Cart 🛒</button>
+<button class="buy" onclick="buyNow('${p}')">Buy Now</button>
+</div>
+</div>
+`);
+});
+</script>
+
+</div>
+</section>
+
+<!-- BUY MODAL -->
+<div class="modal" id="buyModal">
+  <div class="modal-content">
+    <h3>Order Details</h3>
+    <input type="text" id="productName" readonly>
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <input type="text" placeholder="Country">
+    <input type="text" placeholder="Wallet Address">
+
+    <div class="crypto">
+      <h4>Pay Now (Crypto)</h4>
+
+      <!-- REPLACE WALLET ADDRESS BELOW -->
+      <a href="metamask://send/0xYOUR_WALLET_ADDRESS">Pay via MetaMask</a>
+      <a href="trust://send?address=0xYOUR_WALLET_ADDRESS">Pay via Trust Wallet</a>
+      <a href="https://www.binance.com/en/my/wallet/account/main">Pay via Binance</a>
     </div>
 
-    <footer>
-        <p>&copy; 2023 IMPSTONES. All rights reserved.</p>
-    </footer>
+    <button onclick="document.getElementById('buyModal').style.display='none'">
+      Close
+    </button>
+  </div>
+</div>
 
-    <script>
-        // Simple bid counter example (for demo only)
-        const buttons = document.querySelectorAll('.bid-button');
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                alert('Bid placed! (This is a demo - no real bidding yet.)');
-            });
-        });
-    </script>
+<footer>
+© 2026 IMPSTONE GLOBAL | Worldwide Gem Export
+</footer>
+
 </body>
 </html>
