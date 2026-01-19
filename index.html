@@ -1,240 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>impstone.global | International Gemstone Marketplace</title>
-
-<style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background:#f2f2f2;
-  color:#222;
-}
-
-/* Header */
-header{
-  background:#111;
-  color:#fff;
-  padding:14px 30px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-.logo{
-  font-size:22px;
-  font-weight:700;
-  letter-spacing:1px;
-}
-.logo span{
-  color:#d4af37;
-}
-nav a{
-  color:#fff;
-  text-decoration:none;
-  margin-left:18px;
-  font-size:14px;
-}
-
-/* Search bar */
-.search-box{
-  background:#1a1a1a;
-  padding:15px;
-  display:flex;
-  justify-content:center;
-}
-.search-box input{
-  width:60%;
-  padding:10px;
-  border:none;
-  border-radius:4px 0 0 4px;
-}
-.search-box button{
-  padding:10px 18px;
-  border:none;
-  background:#d4af37;
-  font-weight:600;
-  border-radius:0 4px 4px 0;
-  cursor:pointer;
-}
-
-/* Hero */
-.hero{
-  background:linear-gradient(to right,#111,#333);
-  color:#fff;
-  text-align:center;
-  padding:50px 20px;
-}
-.hero h1{
-  font-size:34px;
-}
-.hero p{
-  font-size:16px;
-  opacity:.9;
-}
-
-/* Section */
-section{
-  padding:35px 25px;
-}
-.section-title{
-  font-size:22px;
-  margin-bottom:20px;
-}
-
-/* Grid */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:20px;
-}
-
-/* Card */
-.card{
-  background:#fff;
-  border-radius:6px;
-  overflow:hidden;
-  box-shadow:0 2px 8px rgba(0,0,0,.1);
-}
-.card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-.card-body{
-  padding:14px;
-}
-.card-body h3{
-  margin:0;
-  font-size:16px;
-}
-.card-body p{
-  font-size:13px;
-  color:#555;
-  margin:4px 0;
-}
-.price{
-  color:#0a8a0a;
-  font-weight:700;
-}
-.btn{
-  display:block;
-  margin-top:10px;
-  background:#111;
-  color:#fff;
-  text-align:center;
-  padding:8px;
-  text-decoration:none;
-  border-radius:4px;
-  font-size:13px;
-}
-
-/* Trust */
-.trust{
-  background:#fff;
-  text-align:center;
-}
-.trust p{
-  font-size:14px;
-}
-
-/* Footer */
-footer{
-  background:#111;
-  color:#aaa;
-  padding:20px;
-  text-align:center;
-  font-size:13px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMPSTONES - Premium Gemstone Auctions</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background-color: #333; color: white; text-align: center; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .auction-item { border: 1px solid #ddd; margin: 10px; padding: 10px; background: white; display: inline-block; width: 300px; vertical-align: top; }
+        .auction-item img { width: 100%; height: 200px; object-fit: cover; }
+        .bid-button { background-color: #4CAF50; color: white; padding: 10px; border: none; cursor: pointer; }
+        footer { background-color: #333; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+    </style>
 </head>
-
 <body>
+    <header>
+        <h1>IMPSTONES</h1>
+        <p>Your Premier Destination for Rare Gemstone Auctions</p>
+        <nav>
+            <a href="#auctions" style="color: white; margin: 0 10px;">Auctions</a>
+            <a href="#about" style="color: white; margin: 0 10px;">About Us</a>
+            <a href="#contact" style="color: white; margin: 0 10px;">Contact</a>
+        </nav>
+    </header>
 
-<header>
-  <div class="logo">impstone<span>.global</span></div>
-  <nav>
-    <a href="#">Marketplace</a>
-    <a href="#">Wholesale</a>
-    <a href="#">Export</a>
-    <a href="#">Contact</a>
-  </nav>
-</header>
+    <div class="container">
+        <section id="auctions">
+            <h2>Current Auctions</h2>
+            <div class="auction-item">
+                <img src="https://via.placeholder.com/300x200?text=Ruby+Gem" alt="Ruby Gemstone">
+                <h3>Rare Ruby Gem</h3>
+                <p>Description: A stunning 5-carat ruby from Myanmar. Perfect for collectors.</p>
+                <p>Current Bid: $500</p>
+                <button class="bid-button">Place Bid</button>
+            </div>
+            <div class="auction-item">
+                <img src="https://via.placeholder.com/300x200?text=Sapphire+Gem" alt="Sapphire Gemstone">
+                <h3>Blue Sapphire</h3>
+                <p>Description: High-quality 3-carat sapphire with excellent clarity.</p>
+                <p>Current Bid: $300</p>
+                <button class="bid-button">Place Bid</button>
+            </div>
+            <div class="auction-item">
+                <img src="https://via.placeholder.com/300x200?text=Emerald+Gem" alt="Emerald Gemstone">
+                <h3>Colombian Emerald</h3>
+                <p>Description: Vibrant 4-carat emerald, ethically sourced.</p>
+                <p>Current Bid: $400</p>
+                <button class="bid-button">Place Bid</button>
+            </div>
+            <!-- Add more items as needed -->
+        </section>
 
-<div class="search-box">
-  <input type="text" placeholder="Search gemstones, ruby, sapphire, emerald...">
-  <button>Search</button>
-</div>
+        <section id="about">
+            <h2>About IMPSTONES</h2>
+            <p>At IMPSTONES, we specialize in authentic gemstone auctions. Discover rare finds from around the world and bid with confidence.</p>
+        </section>
 
-<div class="hero">
-  <h1>International Gemstone Marketplace</h1>
-  <p>Natural • Certified • Worldwide Export</p>
-</div>
-
-<section>
-  <div class="section-title">Featured Gemstones</div>
-
-  <div class="grid">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1615484477778-ca3b77940c25">
-      <div class="card-body">
-        <h3>Blue Sapphire</h3>
-        <p>Natural • Oval Cut</p>
-        <p class="price">$120 / carat</p>
-        <a class="btn" href="#">View Stone</a>
-      </div>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: info@impstones.com | Phone: (123) 456-7890</p>
+        </section>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee">
-      <div class="card-body">
-        <h3>Yellow Sapphire</h3>
-        <p>Certified • Round</p>
-        <p class="price">$95 / carat</p>
-        <a class="btn" href="#">View Stone</a>
-      </div>
-    </div>
+    <footer>
+        <p>&copy; 2023 IMPSTONES. All rights reserved.</p>
+    </footer>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1607082349566-1870c4c2b83d">
-      <div class="card-body">
-        <h3>Ruby</h3>
-        <p>Natural • Cushion Cut</p>
-        <p class="price">$150 / carat</p>
-        <a class="btn" href="#">View Stone</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1611095564985-89765398121f">
-      <div class="card-body">
-        <h3>Emerald</h3>
-        <p>Natural • Oval</p>
-        <p class="price">$180 / carat</p>
-        <a class="btn" href="#">View Stone</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="trust">
-  <h2>Why impstone.global?</h2>
-  <p>
-    ✔ Worldwide Shipping<br>
-    ✔ Wholesale & Export Parcels<br>
-    ✔ Bank Transfer & Crypto Accepted<br>
-    ✔ Trusted Indian Exporter
-  </p>
-</section>
-
-<footer>
-  © 2026 impstone.global | Jaipur, India | WhatsApp: +91 XXXXX XXXXX
-</footer>
-
+    <script>
+        // Simple bid counter example (for demo only)
+        const buttons = document.querySelectorAll('.bid-button');
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Bid placed! (This is a demo - no real bidding yet.)');
+            });
+        });
+    </script>
 </body>
 </html>
