@@ -1,34 +1,240 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>ImpStone Global</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>impstone.global | International Gemstone Marketplace</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:#f2f2f2;
+  color:#222;
+}
+
+/* Header */
+header{
+  background:#111;
+  color:#fff;
+  padding:14px 30px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  font-size:22px;
+  font-weight:700;
+  letter-spacing:1px;
+}
+.logo span{
+  color:#d4af37;
+}
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:18px;
+  font-size:14px;
+}
+
+/* Search bar */
+.search-box{
+  background:#1a1a1a;
+  padding:15px;
+  display:flex;
+  justify-content:center;
+}
+.search-box input{
+  width:60%;
+  padding:10px;
+  border:none;
+  border-radius:4px 0 0 4px;
+}
+.search-box button{
+  padding:10px 18px;
+  border:none;
+  background:#d4af37;
+  font-weight:600;
+  border-radius:0 4px 4px 0;
+  cursor:pointer;
+}
+
+/* Hero */
+.hero{
+  background:linear-gradient(to right,#111,#333);
+  color:#fff;
+  text-align:center;
+  padding:50px 20px;
+}
+.hero h1{
+  font-size:34px;
+}
+.hero p{
+  font-size:16px;
+  opacity:.9;
+}
+
+/* Section */
+section{
+  padding:35px 25px;
+}
+.section-title{
+  font-size:22px;
+  margin-bottom:20px;
+}
+
+/* Grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+
+/* Card */
+.card{
+  background:#fff;
+  border-radius:6px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+.card-body{
+  padding:14px;
+}
+.card-body h3{
+  margin:0;
+  font-size:16px;
+}
+.card-body p{
+  font-size:13px;
+  color:#555;
+  margin:4px 0;
+}
+.price{
+  color:#0a8a0a;
+  font-weight:700;
+}
+.btn{
+  display:block;
+  margin-top:10px;
+  background:#111;
+  color:#fff;
+  text-align:center;
+  padding:8px;
+  text-decoration:none;
+  border-radius:4px;
+  font-size:13px;
+}
+
+/* Trust */
+.trust{
+  background:#fff;
+  text-align:center;
+}
+.trust p{
+  font-size:14px;
+}
+
+/* Footer */
+footer{
+  background:#111;
+  color:#aaa;
+  padding:20px;
+  text-align:center;
+  font-size:13px;
+}
+</style>
 </head>
-<body style="font-family:Arial; text-align:center; padding:20px;">
 
-<h1>ImpStone Global</h1>
-<p><b>Gold • Silver • Gemstones</b></p>
-<p>Trusted Exporter | Worldwide 🌍</p>
+<body>
 
-<hr>
+<header>
+  <div class="logo">impstone<span>.global</span></div>
+  <nav>
+    <a href="#">Marketplace</a>
+    <a href="#">Wholesale</a>
+    <a href="#">Export</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
 
-<h2>About Us</h2>
-<p>
-ImpStone Global is a trusted supplier and exporter of
-precious gold, silver, and natural gemstones for
-international buyers.
-</p>
+<div class="search-box">
+  <input type="text" placeholder="Search gemstones, ruby, sapphire, emerald...">
+  <button>Search</button>
+</div>
 
-<h2>Products</h2>
-<p>Gold | Silver | Natural Gemstones</p>
-<p>Bulk • Wholesale • Custom Orders</p>
+<div class="hero">
+  <h1>International Gemstone Marketplace</h1>
+  <p>Natural • Certified • Worldwide Export</p>
+</div>
 
-<h2>Payments</h2>
-<p>Bank Transfer • PayPal • Crypto (BTC, ETH, USDT)</p>
+<section>
+  <div class="section-title">Featured Gemstones</div>
 
-<h2>Contact</h2>
-<p>Email: impstoneglobal@gmail.com</p>
-<p>WhatsApp: +91 XXXXX XXXXX</p>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1615484477778-ca3b77940c25">
+      <div class="card-body">
+        <h3>Blue Sapphire</h3>
+        <p>Natural • Oval Cut</p>
+        <p class="price">$120 / carat</p>
+        <a class="btn" href="#">View Stone</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee">
+      <div class="card-body">
+        <h3>Yellow Sapphire</h3>
+        <p>Certified • Round</p>
+        <p class="price">$95 / carat</p>
+        <a class="btn" href="#">View Stone</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1607082349566-1870c4c2b83d">
+      <div class="card-body">
+        <h3>Ruby</h3>
+        <p>Natural • Cushion Cut</p>
+        <p class="price">$150 / carat</p>
+        <a class="btn" href="#">View Stone</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1611095564985-89765398121f">
+      <div class="card-body">
+        <h3>Emerald</h3>
+        <p>Natural • Oval</p>
+        <p class="price">$180 / carat</p>
+        <a class="btn" href="#">View Stone</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="trust">
+  <h2>Why impstone.global?</h2>
+  <p>
+    ✔ Worldwide Shipping<br>
+    ✔ Wholesale & Export Parcels<br>
+    ✔ Bank Transfer & Crypto Accepted<br>
+    ✔ Trusted Indian Exporter
+  </p>
+</section>
+
+<footer>
+  © 2026 impstone.global | Jaipur, India | WhatsApp: +91 XXXXX XXXXX
+</footer>
 
 </body>
 </html>
